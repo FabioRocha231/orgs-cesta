@@ -1,11 +1,9 @@
 import {
-  Image,
-  ImageSourcePropType,
   StyleSheet,
   Text,
   View,
 } from "react-native";
-
+import { FarmLogoAndName } from "../../components/FarmLogoAndName";
 import logo from "../../../assets/logo.png";
 import { TextStyled } from "../../components/TextStyled";
 import { TopComponent } from "../../components/TopComponent";
@@ -23,14 +21,7 @@ export const Cesta = () => {
           textContent="Cesta de Verduras"
           customStyle={styles.cestName}
         />
-        <View style={styles.farm}>
-          <Image style={styles.farmLogo} source={logo as ImageSourcePropType} />
-          <TextStyled
-            isBold={false}
-            textContent="Jenny Jack Farm"
-            customStyle={styles.farmName}
-          />
-        </View>
+        <FarmLogoAndName farmLogo={logo} farmName="Jenny Jack Farm" />
         <TextStyled
           isBold={false}
           customStyle={styles.description}
@@ -53,19 +44,6 @@ const styles = StyleSheet.create({
     color: "#464646",
     fontSize: 26,
     lineHeight: 42,
-  },
-  farm: {
-    flexDirection: "row",
-    paddingVertical: 12,
-  },
-  farmLogo: {
-    width: 32,
-    height: 32,
-  },
-  farmName: {
-    fontSize: 16,
-    lineHeight: 26,
-    marginLeft: 12,
   },
   description: {
     color: "#A3A3A3",

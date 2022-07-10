@@ -1,10 +1,11 @@
 import { StatusBar, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import { Cesta } from "./src/screens/Cesta";
+
 import {
   useFonts,
   Montserrat_400Regular,
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
+import { Cesta } from "./src/screens/Cest";
 
 const App = () => {
   const [fontsLoaded] = useFonts({
@@ -14,7 +15,7 @@ const App = () => {
   if (!fontsLoaded) {
     return <Text>Loading...</Text>;
   }
-  
+
   return (
     <SafeAreaView>
       <StatusBar />

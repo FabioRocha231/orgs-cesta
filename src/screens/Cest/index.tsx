@@ -2,25 +2,20 @@ import {
   Image,
   ImageSourcePropType,
   StyleSheet,
-  Dimensions,
   Text,
   View,
 } from "react-native";
-import cestHeader from "../../assets/topo.png";
-import logo from "../../assets/logo.png";
-import { TextStyled } from "../components/TextStyled";
 
-const width = Dimensions.get("window").width;
+import logo from "../../../assets/logo.png";
+import { TextStyled } from "../../components/TextStyled";
+import { TopComponent } from "../../components/TopComponent";
+
+
 
 export const Cesta = () => {
   return (
     <>
-      <Image style={styles.header} source={cestHeader as ImageSourcePropType} />
-      <TextStyled
-        isBold={true}
-        textContent="Detalhes da cesta"
-        customStyle={styles.title}
-      />
+      <TopComponent />
 
       <View style={styles.cest}>
         <TextStyled
@@ -49,19 +44,7 @@ export const Cesta = () => {
 };
 
 const styles = StyleSheet.create({
-  header: {
-    width: "100%",
-    height: (578 / 768) * width,
-  },
-  title: {
-    width: "100%",
-    position: "absolute",
-    textAlign: "center",
-    fontSize: 16,
-    lineHeight: 26,
-    color: "#fff",
-    padding: 16,
-  },
+  
   cest: {
     paddingVertical: 8,
     paddingHorizontal: 16,

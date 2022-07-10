@@ -1,11 +1,11 @@
-import { FarmCest } from "../../components/FarmCest";
+import { FarmCest, FarmCestProps } from "../../components/FarmCest";
 import { TopComponent } from "../../components/TopComponent";
 
-export const Cesta = () => {
+export const Cesta = ({ data }: FarmCestProps) => {
   return (
     <>
-      <TopComponent />
-      <FarmCest />
+      <TopComponent data={data} />
+      <FarmCest data={data} />
     </>
   );
 };

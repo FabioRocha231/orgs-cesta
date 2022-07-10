@@ -1,5 +1,5 @@
 import { StatusBar, SafeAreaView, Text } from "react-native";
-
+import { Cest } from "./src/mocks/Cest";
 import {
   useFonts,
   Montserrat_400Regular,
@@ -19,7 +19,7 @@ const App = () => {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Cesta />
+      <Cesta data={Cest} />
     </SafeAreaView>
   );
 };

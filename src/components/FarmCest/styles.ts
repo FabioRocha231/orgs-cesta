@@ -22,4 +22,12 @@ export const FarmCestStyles = StyleSheet.create({
     lineHeight: 42,
     marginTop: 8,
   },
+  title: {
+    color: "#464646",
+    marginTop: 32,
+    marginBottom: 8,
+    paddingHorizontal: 16,
+    fontSize: 20,
+    lineHeight: 32
+  },
 });

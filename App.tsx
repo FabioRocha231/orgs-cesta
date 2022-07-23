@@ -1,11 +1,11 @@
 import { StatusBar, SafeAreaView, Text } from "react-native";
-import { Cest } from "./src/mocks/Cest";
 import {
   useFonts,
   Montserrat_400Regular,
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 import { Cesta } from "./src/screens/Cest";
+import { Cest } from "./src/mocks/Cest";
 
 const App = () => {
   const [fontsLoaded] = useFonts({
@@ -17,7 +17,7 @@ const App = () => {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar />
       <Cesta data={Cest} />
     </SafeAreaView>
